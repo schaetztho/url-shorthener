@@ -1,0 +1,7 @@
+cat << 'EOF' > .dockerignore
+bin/
+obj/
+.vs/
+.git/
+*.user
+EOF

@@ -1,0 +1,24 @@
+@host = http://localhost:8080
+
+### Health
+GET {{host}}/healthz
+
+### List links (contains the seeded dotnet/docker links)
+GET {{host}}/api/links
+
+### Create a link
+POST {{host}}/api/links
+Content-Type: application/json
+
+{
+  "url": "https://learn.microsoft.com/aspnet/core"
+}
+
+### Get a link by code
+GET {{host}}/api/links/dotnet
+
+### Redirect (does not follow the redirect)
+GET {{host}}/dotnet
+
+### Delete a link
+DELETE {{host}}/api/links/dotnet
